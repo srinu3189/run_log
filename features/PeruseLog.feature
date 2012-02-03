@@ -5,6 +5,10 @@ Feature: Peruse Log
 	I want to peruse my running log
 
 	Scenario: Run entries display miles
+		Given a run of 11 miles
+		When I visit the logbook
+		Then I should see a run with 11 miles		
+
 	Scenario: Run entries display time
 	Scenario: Run entries display description
 	Scenario: Run entries display rolling miles per week

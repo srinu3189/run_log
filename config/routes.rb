@@ -1,4 +1,7 @@
 RunLog::Application.routes.draw do
+
+	match 'log_book' => 'log_book#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
