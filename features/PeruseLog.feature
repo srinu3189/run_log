@@ -15,6 +15,10 @@ Feature: Peruse Log
 		Then I should see a run with a time of 1:10:17		
 
 	Scenario: Run entries display description
+		Given a run with a description of "smashing run!!" 
+		When I visit the logbook
+		Then I should see a run with a description of "smashing run!!"		
+
 	Scenario: Run entries display rolling miles per week
 	Scenario: Run entries are ordered cronologically descending
 	Scenario: Log displays only last year of runs

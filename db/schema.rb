@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120203022656) do
+ActiveRecord::Schema.define(:version => 20120207031202) do
 
   create_table "runs", :force => true do |t|
     t.integer  "miles"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "time"
+    t.text     "description"
   end
 
 end
