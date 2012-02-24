@@ -1,3 +1,22 @@
+<%= form_for @run, :as => :run, :url => { :controller => 'log_book', :action => 'new_run' } do |f| %>
+  <div class='field'>
+    <%= f.label :miles %>
+    <%= f.text_field :miles, :id => 'miles' %> miles
+  </div>
+  <div class='field'>
+    <%= f.label :description %>
+    <%= f.text_field :description, :id => 'description' %>
+  </div>
+  <div class='field'>
+    <%= f.label :time %>
+    <%= f.text_field :hours, :id => 'hours' %>
+    <%= f.text_field :minutes, :id => 'minutes' %>
+    <%= f.text_field :seconds, :id => 'seconds' %>
+  </div>
+  <div class='actions'>
+    <%= f.submit 'Add Run' %>
+  </div>
+<% end %>
 <% @runs.each do |r| %>
 	Miles: <%= r.miles %>
 	Time: <%= r.run_time %>

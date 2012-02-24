@@ -12,7 +12,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'rspec-rails', '>= 2.0.0'
+  gem 'rspec-rails', '>= 2.8.1'
   gem 'cucumber-rails', '>= 0.3.2'
   gem 'database_cleaner', '>=0.7.1'
   gem 'webrat', '>= 0.7.2'
