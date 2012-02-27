@@ -22,7 +22,7 @@ Then /^I should see today's run in the log$/ do
 end
 
 When /^I log a run for yesterday$/ do
-  select_date "Run date", :with => "16 Mar 2010"
+  select_date "Date", :with => "16 Mar 2010"
   fill_in "run_miles", :with => 8 
   fill_in "run_description", :with => "The trials were expecially tough today."
   fill_in "run_hours", :with => "1" 

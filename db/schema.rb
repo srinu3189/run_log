@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226023055) do
+ActiveRecord::Schema.define(:version => 20120227135636) do
 
   create_table "runs", :force => true do |t|
     t.integer  "miles"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20120226023055) do
     t.datetime "updated_at",  :null => false
     t.integer  "time"
     t.text     "description"
-    t.date     "run_date"
+    t.date     "date"
   end
 
 end

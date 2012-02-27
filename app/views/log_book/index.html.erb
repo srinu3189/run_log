@@ -1,7 +1,7 @@
 <%= form_for @run, :as => :run, :url => { :controller => 'log_book', :action => 'new_run' } do |f| %>
   <div class='field'>
-    <%= f.label :run_date %>
-    <%= f.date_select :run_date %> 
+    <%= f.label :date %>
+    <%= f.date_select :date %> 
         
   </div>
   <div class='field'>
@@ -23,7 +23,7 @@
   </div>
 <% end %>
 <% @runs.each do |r| %>
-	Date: <%= r.run_date %>
+	Date: <%= r.date %>
 	Miles: <%= r.miles %>
 	Time: <%= r.run_time %>
 	Description: <%= r.description %>

@@ -11,7 +11,7 @@ Given /^a run with a description of "([^"]*)"$/ do |desc|
 end
 
 Given /^a run for today$/ do
-	Run.create!(:run_date => Date.today)
+	Run.create!(:date => Date.today)
 end
 
 When /^I visit the logbook$/ do
