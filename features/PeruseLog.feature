@@ -4,6 +4,11 @@ Feature: Peruse Log
 	As a runner
 	I want to peruse my running log
 
+	Scenario: Run entries display date
+		Given a run for today
+		When I visit the logbook
+		Then I should see a run with today's date	
+
 	Scenario: Run entries display miles
 		Given a run of 11 miles
 		When I visit the logbook

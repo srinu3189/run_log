@@ -16,6 +16,7 @@ group :development, :test do
   gem 'cucumber-rails', '>= 0.3.2'
   gem 'database_cleaner', '>=0.7.1'
   gem 'webrat', '>= 0.7.2'
+  gem 'timecop'
 end
 
 # To use ActiveModel has_secure_password
