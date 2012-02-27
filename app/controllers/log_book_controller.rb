@@ -1,8 +1,8 @@
 class LogBookController < ApplicationController
-	def index
+  def index
     @new_run = Run.new
-		@runs =	Run.find(:all)
-	end
+    @runs =	Run.find(:all)
+  end
 
   def new_run
     @run = Run.new(params[:run])

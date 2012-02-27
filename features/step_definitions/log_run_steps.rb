@@ -1,7 +1,7 @@
 require 'timecop'
 
 Given /^I am on the logbook page$/ do
-	visit log_book_path
+  visit log_book_path
   static_date = Time.local(2010, 3, 17, 5, 0, 0)
   Timecop.freeze(static_date)
 end
