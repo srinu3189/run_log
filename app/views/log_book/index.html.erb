@@ -23,8 +23,10 @@
   </div>
 <% end %>
 <% @runs.each do |r| %>
-	Date: <%= r.date %>
-	Miles: <%= r.miles %>
-	Time: <%= r.run_time %>
-	Description: <%= r.description %>
+  <div id='run_<%= r.id %>'>
+  	Date: <%= r.date %>
+  	Miles: <%= r.miles %>
+  	Time: <%= r.run_time %>
+  	Description: <%= r.description %>
+  </div>
 <% end %>

@@ -24,6 +24,10 @@ Feature: Peruse Log
 		When I visit the logbook
 		Then I should see a run with a description of "smashing run!!"		
 
+	Scenario: Run entries are ordered chronologically descending
+		Given runs over the past two weeks 
+		When I visit the logbook
+		Then the runs should be ordered chronologically
+
 	Scenario: Run entries display rolling miles per week
-	Scenario: Run entries are ordered cronologically descending
 	Scenario: Log displays only last year of runs
