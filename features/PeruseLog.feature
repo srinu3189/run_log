@@ -30,4 +30,3 @@ Feature: Peruse Log
 		Then the runs should be ordered chronologically
 
 	Scenario: Run entries display rolling miles per week
-	Scenario: Log displays only last year of runs

@@ -28,5 +28,6 @@
   	Miles: <%= r.miles %>
   	Time: <%= r.run_time %>
   	Description: <%= r.description %>
+    <%= link_to "Destroy", :controller => "log_book", :action => "destroy_run", :id => r %>
   </div>
 <% end %>

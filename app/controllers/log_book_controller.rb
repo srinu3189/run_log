@@ -9,4 +9,10 @@ class LogBookController < ApplicationController
     @run.save
     redirect_to log_book_path 
   end
+
+  def destroy_run
+    @post = Run.find(params[:id])
+    @post.destroy
+    redirect_to log_book_path
+  end
 end
