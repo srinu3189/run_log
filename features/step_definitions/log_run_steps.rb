@@ -2,7 +2,7 @@ require 'timecop'
 
 Given /^I am on the logbook page$/ do
   visit log_book_path
-  static_date = Time.local(2010, 3, 17, 5, 0, 0)
+  static_date = Time.local(2012, 3, 17, 5, 0, 0)
   Timecop.freeze(static_date)
 end
 
@@ -22,7 +22,7 @@ Then /^I should see today's run in the log$/ do
 end
 
 When /^I log a run for yesterday$/ do
-  select_date "Date", :with => "16 Mar 2010"
+  select "16", :from => "run_date_3i"
   fill_in "run_miles", :with => 8 
   fill_in "run_description", :with => "The trials were expecially tough today."
   fill_in "run_hours", :with => "1" 
@@ -33,7 +33,7 @@ end
 
 Then /^I should see yesterday's run in the log$/ do
   page.should have_content('8');
-  page.should have_content('2010-03-16');
+  page.should have_content('2012-03-16');
 end
 
 After do
