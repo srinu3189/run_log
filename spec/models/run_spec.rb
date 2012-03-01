@@ -1,7 +1,7 @@
 describe Run do
   it "displays the 'run time' formatted nicely" do
     describe '#run_time' do
-      run = Run.create!(:time => 4222)
+      run = Run.new(:time => 4222)
       run.run_time.should == "01:10:22"	
     end
   end

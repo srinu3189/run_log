@@ -1,17 +1,17 @@
 Given /^a run of (\d+) miles$/ do |miles|
-	Run.create!(:miles => miles)
+	Run.create!(:date => Date.today, :miles => miles)
 end
 
 Given /^a run of (\d+) seconds$/ do |seconds|
-	Run.create!(:time => seconds)
+	Run.create!(:date => Date.today, :miles => 1, :time => seconds)
 end
 
 Given /^a run with a description of "([^"]*)"$/ do |desc|
-	Run.create!(:description => desc)
+	Run.create!(:date => Date.today, :miles => 1, :description => desc)
 end
 
 Given /^a run for today$/ do
-	Run.create!(:date => Date.today)
+	Run.create!(:miles => 1, :date => Date.today)
 end
 
 Given /^runs over the past two weeks$/ do
@@ -46,4 +46,10 @@ end
 
 Then /^the runs should be ordered chronologically$/ do
   page.body.should =~ /run_3.*run_2/m
+end
+
+Then /^each run should display the rolling MPW for that date$/ do
+  within('#run_1') do |content|
+    page.should have_content('15')
+  end
 end

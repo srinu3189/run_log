@@ -1,4 +1,14 @@
+require 'calculates_mileage'
+
 class Run < ActiveRecord::Base
+  attr_accessor :mpw
+
+  def self.find_all_and_calculate_mileage
+    runs =	self.find(:all, :order => "date desc")
+    CalculatesMileage.calculate_rolling_mpw_for_runs(runs) if runs
+    runs
+  end
+
   def run_time
     return '' if self.time == nil
     seconds = self.time.to_i

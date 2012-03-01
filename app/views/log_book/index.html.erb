@@ -26,6 +26,7 @@
   <div id='run_<%= r.id %>'>
   	Date: <%= r.date %>
   	Miles: <%= r.miles %>
+  	Rolling MPW: <%= r.mpw %>
   	Time: <%= r.run_time %>
   	Description: <%= r.description %>
     <%= link_to "Destroy", :controller => "log_book", :action => "destroy_run", :id => r %>

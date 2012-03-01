@@ -30,3 +30,6 @@ Feature: Peruse Log
 		Then the runs should be ordered chronologically
 
 	Scenario: Run entries display rolling miles per week
+		Given runs over the past two weeks
+		When I visit the logbook
+		Then each run should display the rolling MPW for that date

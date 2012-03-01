@@ -1,7 +1,7 @@
 class LogBookController < ApplicationController
   def index
     @new_run = Run.new
-    @runs =	Run.find(:all, :order => "date desc")
+    @runs =	Run.find_all_and_calculate_mileage
   end
 
   def new_run

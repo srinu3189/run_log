@@ -1,6 +1,6 @@
 Given /^two runs for today$/ do
-  Run.create!(:date => Date.today)
-  Run.create!(:date => Date.today)
+  Run.create!(:date => Date.today, :miles => 1)
+  Run.create!(:date => Date.today, :miles => 2)
 end
 
 When /^delete the first run$/ do
