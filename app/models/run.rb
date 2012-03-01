@@ -1,7 +1,13 @@
 require 'calculates_mileage'
 
 class Run < ActiveRecord::Base
+  validates :date, :presence => true
+  validates :miles, :presence => true, :numericality => true
+
   attr_accessor :mpw
+  attr_accessor :hours
+  attr_accessor :minutes
+  attr_accessor :seconds
 
   def self.find_all_and_calculate_mileage
     runs =	self.find(:all, :order => "date desc")

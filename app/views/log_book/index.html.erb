@@ -1,5 +1,15 @@
-<%= form_for @run, :as => :run, :url => { :controller => 'log_book', :action => 'new_run' } do |f| %>
-  <div class='field'>
+<%= form_for @new_run, :as => :run, :url => { :controller => 'log_book', :action => 'new_run' } do |f| %>
+  <% if @new_run.errors.any? %>
+    <div id="errorExplanation">
+    <h2><%= pluralize(@new_run.errors.count, "error") %> prohibited this  from being saved:</h2>
+    <ul>
+    <% @new_run.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+    </div>
+  <% end %>
+<div class='field'>
     <%= f.label :date %>
     <%= f.date_select :date %> 
         

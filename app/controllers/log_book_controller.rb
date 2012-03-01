@@ -5,14 +5,15 @@ class LogBookController < ApplicationController
   end
 
   def new_run
-    @run = Run.new(params[:run])
-    @run.save
-    redirect_to log_book_path 
+    @new_run = Run.new(params[:run])
+    @new_run.save
+    @runs =	Run.find_all_and_calculate_mileage
+    render :action => "index"
   end
 
   def destroy_run
-    @post = Run.find(params[:id])
-    @post.destroy
+    @run = Run.find(params[:id])
+    @run.destroy
     redirect_to log_book_path
   end
 end
