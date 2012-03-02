@@ -10,23 +10,24 @@
     </ul>
     </div>
   <% end %>
+  <fieldset>
+    <legend>Log a Run</legend>
   <div id='run_date' class='field'>
-    <%= f.date_select :date %> 
+    <%= f.date_select :date, options = { :date_separator => "/ ", :use_short_month => "true", :order => [:day, :month, :year] } %> 
   </div>
   <div class='field'>
     <%= f.number_field :miles, :min => 1, :max => 999, :size => 5, :autofocus => true %> miles
   </div>
   <div class='field'>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.number_field :hours, :value => 0, :size => 3 %> : <%= f.number_field :minutes, :value => 0, :size => 3 %> : <%= f.number_field :seconds, :value => 0, :size => 3 %>
   </div>
   <div class='field'>
-    <%= f.label :time %>
-    <%= f.number_field :hours, :size => 3 %> : <%= f.number_field :minutes, :size => 3 %> : <%= f.number_field :seconds, :size => 3 %>
+    <%= f.text_area :description, :rows => 5, :placeholder => 'Description' %>
   </div>
   <div class='actions'>
     <%= f.submit 'Add Run' %>
   </div>
+</fieldset>
 <% end %>
 </div>
 <% @runs.each do |r| %>

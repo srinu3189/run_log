@@ -1,3 +1,40 @@
 // Place all the styles related to the LogBook controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body { background-color: #fff; color: #000; }
+
+body, p, ol, ul, td, textarea {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+input, textarea, select
+{
+  font-size: 18px;
+}
+
+#run_entry {
+  background-color: #fff;
+  padding: 15px;
+  margin: 20px;
+  width: 400px;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+}
+
+.field
+{
+  margin: 15px;
+}
+
+input[type='submit']
+{
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  text-decoration: underline;
+  border: none;
+  float: right;
+}
