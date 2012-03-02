@@ -5,7 +5,7 @@ end
 
 When /^delete the first run$/ do
   within('#run_1') do
-    click_link "Destroy"
+    click_link "X"
   end
 end
 

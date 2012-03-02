@@ -41,7 +41,7 @@ Then /^I should see a run with a description of "([^"]*)"$/ do |desc|
 end
 
 Then /^I should see a run with today's date$/ do
-	page.should have_content(Date.today.to_s)
+	page.should have_content(Date.today.strftime('%B %-d, %Y'))
 end
 
 Then /^the runs should be ordered chronologically$/ do

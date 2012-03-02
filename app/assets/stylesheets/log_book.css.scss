@@ -3,21 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body { background-color: #fff; color: #000; }
 
-body, p, ol, ul, td, textarea {
-  font-family: verdana, arial, helvetica, sans-serif;
+body, p, ol, ul, td {
+  font-family: 'Futura', 'Gill Sans', arial, helvetica, sans-serif;
+  font-size: 20px;
+}
+
+legend
+{
+  border: 1px solid black;
+  padding: 3px;
 }
 
 input, textarea, select
 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
-#run_entry {
-  background-color: #fff;
+#run_form {
   padding: 15px;
   margin: 20px;
-  width: 400px;
-  font-size: 18px;
+  width: 600px;
+  font-size: 24px;
 }
 
 label {
@@ -33,8 +39,42 @@ input[type='submit']
 {
   background: #fff;
   color: #000;
-  font-size: 16px;
   text-decoration: underline;
   border: none;
   float: right;
+}
+
+.logged_run
+{
+  margin: 20px;
+  width: 600px;
+  padding: 15px;
+}
+
+.run_desc
+{
+  padding-top: 25px;
+}
+
+.run_destroyer
+{
+  float: right;
+  margin-top: -35px;
+  padding: 1px 3px;
+  border: 1px dotted red;
+  a
+  {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+.run_miles
+{
+  font-size: 24px;
+}
+
+.description_text
+{
+  font-family: 'American Typewriter';
 }

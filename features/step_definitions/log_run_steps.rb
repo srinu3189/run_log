@@ -33,7 +33,7 @@ end
 
 Then /^I should see yesterday's run in the log$/ do
   page.should have_content('8');
-  page.should have_content('2012-03-16');
+  page.should have_content('March 16, 2012');
 end
 
 After do

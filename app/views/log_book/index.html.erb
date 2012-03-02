@@ -10,7 +10,7 @@
     </ul>
     </div>
   <% end %>
-  <fieldset>
+  <fieldset id='run_form'>
     <legend>Log a Run</legend>
   <div id='run_date' class='field'>
     <%= f.date_select :date, options = { :date_separator => "/ ", :use_short_month => "true", :order => [:day, :month, :year] } %> 
@@ -30,13 +30,13 @@
 </fieldset>
 <% end %>
 </div>
+<h1>The Log</h1>
+<hr />
 <% @runs.each do |r| %>
-  <div id='run_<%= r.id %>'>
-  	Date: <%= r.date %>
-  	Miles: <%= r.miles %>
-  	Rolling MPW: <%= r.mpw %>
-  	Time: <%= r.run_time %>
-  	Description: <%= r.description %>
-    <%= link_to "Destroy", :controller => "log_book", :action => "destroy_run", :id => r %>
-  </div>
+  <fieldset id='run_<%= r.id %>' class='logged_run'>
+    <legend><%= r.date.strftime('%B %-d, %Y') %> - <%= r.mpw %> mpw</legend>
+    <div class='run_miles'>Completed <%= r.miles %> miles in <%= r.run_time %></div>
+    <div class='run_destroyer'><%= link_to "X", { :controller => "log_book", :action => "destroy_run", :id => r }, :confirm => 'Destroy this run?' %></div>
+    <div class='run_desc'>The story: <span class='description_text'><%= r.description %></span></div>
+    </fieldset>
 <% end %>
