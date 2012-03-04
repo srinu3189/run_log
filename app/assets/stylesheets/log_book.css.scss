@@ -19,6 +19,24 @@ input, textarea, select
   font-size: 20px;
 }
 
+#flash_notice
+{
+  color: green;
+  padding: 15px;
+  margin: 20px;
+  width: 600px;
+  font-size: 24px;
+}
+
+#flash_alert
+{
+  color: red;
+  padding: 15px;
+  margin: 20px;
+  width: 600px;
+  font-size: 24px;
+}
+
 #run_form {
   padding: 15px;
   margin: 20px;

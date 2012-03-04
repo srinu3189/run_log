@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+  <div id='flash_notice'><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:alert] %>
+  <div id='flash_alert'>
+    Your run ran into some troubles:
+    <%= raw(flash[:alert]) %>
+  </div>
+<% end %>

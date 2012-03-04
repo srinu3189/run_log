@@ -15,6 +15,14 @@ When /^I log a run for today$/ do
   click_button "Add Run"
 end
 
+When /^I log a run without entering miles$/ do
+  click_button "Add Run"
+end
+
+Then /^I should see a message that "([^"]*)"$/ do |arg1|
+  page.should have_content("Miles can't be blank")
+end
+
 Then /^I should see today's run in the log$/ do 
   page.should have_content('17');
   page.should have_content('Like a boss!');

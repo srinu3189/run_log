@@ -13,3 +13,8 @@ Feature: Log a Run
 		Given I am on the logbook page 
 		When I log a run for yesterday 
 		Then I should see yesterday's run in the log
+		
+	Scenario: I forgot to enter the miles 
+		Given I am on the logbook page 
+		When I log a run without entering miles 
+		Then I should see a message that "Miles can't be blank"

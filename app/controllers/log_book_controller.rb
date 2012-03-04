@@ -6,9 +6,13 @@ class LogBookController < ApplicationController
 
   def new_run
     @new_run = Run.new(params[:run])
-    @new_run.save
-    @runs =	Run.find_all_and_calculate_mileage
-    render :action => "index"
+    if @new_run.save
+      flash[:notice] = 'Run logged successfully!'
+    else
+      @alert_messages = @new_run.errors.full_messages
+      flash[:alert] = render_to_string(:partial => 'bulleted_flash_alerts') 
+    end
+    redirect_to log_book_path
   end
 
   def destroy_run

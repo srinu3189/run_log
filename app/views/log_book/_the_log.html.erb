@@ -1,0 +1,10 @@
+<h1>The Log</h1>
+<hr />
+<% @runs.each do |r| %>
+  <fieldset id='run_<%= r.id %>' class='logged_run'>
+    <legend><%= r.date.strftime('%B %-d, %Y') %> - <%= r.mpw %> mpw</legend>
+    <div class='run_miles'>Completed <%= r.miles %> miles in <%= r.run_time %></div>
+    <div class='run_destroyer'><%= link_to "X", { :controller => "log_book", :action => "destroy_run", :id => r }, :confirm => 'Destroy this run?' %></div>
+    <div class='run_desc'>The story: <span class='description_text'><%= r.description %></span></div>
+    </fieldset>
+<% end %>
