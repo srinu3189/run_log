@@ -1,3 +1,5 @@
+require 'csv'
+
 class LogBookController < ApplicationController
   def index
     @new_run = Run.new
@@ -19,5 +21,18 @@ class LogBookController < ApplicationController
     @run = Run.find(params[:id])
     @run.destroy
     redirect_to log_book_path
+  end
+
+  def export
+    @runs =	Run.find_all_and_calculate_mileage
+    csv_string = CSV.generate do |csv| 
+      csv << ["run_id", "date", "miles", "time", "mpw", "description"]
+      @runs.each do |run|
+        csv << [run.id, run.date, run.miles, run.time, run.mpw, run.description]
+      end
+    end
+    send_data csv_string, 
+      :type => 'text/csv; charset=iso-8859-1; header=present', 
+      :disposition => "attachment; filename=run_log.csv" 
   end
 end
