@@ -1,4 +1,4 @@
-require 'csv'
+require 'exports_runs'
 
 class LogBookController < ApplicationController
   before_filter :authenticate_runner!
@@ -27,12 +27,7 @@ class LogBookController < ApplicationController
 
   def export
     @runs =	Run.find_all_and_calculate_mileage
-    csv_string = CSV.generate do |csv| 
-      csv << ["run_id", "date", "miles", "time", "mpw", "description"]
-      @runs.each do |run|
-        csv << [run.id, run.date, run.miles, run.time, run.mpw, run.description]
-      end
-    end
+    csv_string = ExportsRuns.to_csv(@runs)
     send_data csv_string, 
       :type => 'text/csv; charset=iso-8859-1; header=present', 
       :disposition => "attachment; filename=run_log.csv" 
