@@ -2,7 +2,6 @@ A project I'm using to get more familiar with Cucumber, RSpec, Ruby, and Rails. 
 
 TODO:
 
-Extract "export" function to ExportsRuns class with its own specs
 Think about making a LogBook class to slim down the controller and model
 Learn how to do controller specs well
 UI Work
