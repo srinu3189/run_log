@@ -13,8 +13,8 @@ class LogBookController < ApplicationController
     if @new_run.save
       flash[:notice] = 'Run logged successfully!'
     else
-      @alert_messages = @new_run.errors.full_messages
-      flash[:alert] = render_to_string(:partial => 'bulleted_flash_alerts') 
+      flash[:alert] = render_to_string(:partial => 'bulleted_flash_alerts',
+                                      :object => @new_run.errors.full_messages ) 
     end
     redirect_to log_book_path
   end
