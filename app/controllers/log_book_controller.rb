@@ -1,6 +1,8 @@
 require 'csv'
 
 class LogBookController < ApplicationController
+  before_filter :authenticate_runner!
+
   def index
     @new_run = Run.new
     @runs =	Run.find_all_and_calculate_mileage

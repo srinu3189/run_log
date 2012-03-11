@@ -4,6 +4,9 @@ Feature: Delete a run entry
 	As a runner
 	I want to delete a specific run from the log
 
+	Background:
+		Given I am logged in
+
 	Scenario: Delete a run
 		Given two runs for today
 		When I visit the logbook

@@ -4,6 +4,9 @@ Feature: Export the log
 	As a runner
 	I want to export my log to CSV
 
+	Background: I am logged in
+		Given I am logged in
+
 	Scenario: Export the log
 		Given some runs 
 		And I am on the logbook page 

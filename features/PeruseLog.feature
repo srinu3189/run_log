@@ -4,6 +4,9 @@ Feature: Peruse Log
 	As a runner
 	I want to peruse my running log
 
+	Background: I am logged in
+		Given I am logged in
+
 	Scenario: Run entries display date
 		Given a run for today
 		When I visit the logbook

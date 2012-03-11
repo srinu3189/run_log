@@ -17,6 +17,9 @@ group :development, :test do
   gem 'database_cleaner', '>=0.7.1'
   gem 'webrat', '>= 0.7.2'
   gem 'timecop'
+  gem 'factory_girl_rails', '>= 1.7.0'
+  gem 'capybara', '>= 1.1.2'
+  gem 'devise', '>= 2.0.4'
 end
 
 # To use ActiveModel has_secure_password
