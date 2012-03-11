@@ -1,1 +1,11 @@
 A project I'm using to get more familiar with Cucumber, RSpec, Ruby, and Rails.  At some point this might serve as my running log, but the product owner is kind of a jerkface.
+
+TODO:
+
+Extract "export" function to ExportsRuns class with its own specs
+Think about making a LogBook class to slim down the controller and model
+Learn how to do controller specs well
+UI Work
+Get it working on Heroku so I can use it
+Travis CI
+Graphs (HighCharts?)
