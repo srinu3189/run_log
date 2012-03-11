@@ -4,7 +4,7 @@ Feature: Peruse Log
 	As a runner
 	I want to peruse my running log
 
-	Background: I am logged in
+	Background:
 		Given I am logged in
 
 	Scenario: Run entries display date

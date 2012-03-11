@@ -4,7 +4,7 @@ Feature: Log a Run
 	As a runner
 	I want to log a run for a specific date
 
-	Background: I am logged in
+	Background:
 		Given I am logged in
 
 	Scenario: Log a run for today 

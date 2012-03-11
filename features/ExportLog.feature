@@ -4,7 +4,7 @@ Feature: Export the log
 	As a runner
 	I want to export my log to CSV
 
-	Background: I am logged in
+	Background: 
 		Given I am logged in
 
 	Scenario: Export the log
