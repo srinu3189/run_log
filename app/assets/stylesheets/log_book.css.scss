@@ -1,7 +1,7 @@
 // Place all the styles related to the LogBook controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body { background-color: #fff; color: #000; }
+body { background-color: white; color: black; }
 
 body, p, ol, ul, td {
   font-family: 'Futura', 'Gill Sans', arial, helvetica, sans-serif;
@@ -22,25 +22,26 @@ input, textarea, select
 #flash_notice
 {
   color: green;
-  padding: 15px;
   margin: 20px;
-  width: 600px;
+  width: 700px;
   font-size: 24px;
 }
 
 #flash_alert
 {
   color: red;
-  padding: 15px;
   margin: 20px;
-  width: 600px;
+  width: 700px;
   font-size: 24px;
 }
 
+#main_content
+{
+  padding: 15px 15px 40px 15px;
+  width: 700px;
+}
+
 #run_form {
-  padding: 15px;
-  margin: 20px;
-  width: 600px;
   font-size: 24px;
   border: 1px dotted black;
 }
@@ -65,9 +66,7 @@ input[type='submit']
 
 .logged_run
 {
-  margin: 20px;
-  width: 600px;
-  padding: 15px;
+  margin: 20px 0 20px 0;
   border: 1px dotted black;
 }
 

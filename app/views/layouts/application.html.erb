@@ -8,8 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>run_log</h1>
   <%= render "shared/notices_and_alerts" %>
-  <%= yield %>
+  <div id='main_content'> 
+    <%= yield %>
+  </div>
 
 </body>
 </html>
