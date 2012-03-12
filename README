@@ -4,7 +4,6 @@ TODO:
 
 Think about making a LogBook class to slim down the controller and model
 Learn how to do controller specs well
-UI Work
 Get it working on Heroku so I can use it
 Travis CI
 Graphs (HighCharts?)
