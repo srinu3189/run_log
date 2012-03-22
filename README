@@ -1,9 +1,6 @@
-A project I'm using to get more familiar with Cucumber, RSpec, Ruby, and Rails.  At some point this might serve as my running log, but the product owner is kind of a jerkface.
+A project I'm using to get more familiar with Cucumber, RSpec, Ruby, and Rails.  It is a basic running log with a nice chart for miles per week per year.  It also displays the rolling miles per week for each run logged to give an indication of how many miles are on the legs when the run took place.
 
-TODO:
+TODO: 
 
-Think about making a LogBook class to slim down the controller and model
-Learn how to do controller specs well
-Get it working on Heroku so I can use it
 Travis CI
-Graphs (HighCharts?)
+Make the controller specs better
