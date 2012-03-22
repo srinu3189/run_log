@@ -1,5 +1,7 @@
 ---
 rails.png: rails-782b548cc1ba7f898cdad2d9eb8420d2.png
-application.js: application-8920f88fa51a6b64a501e8e191e5129e.js
+application.js: application-21aff8ef9e5ff93f881f7feae5846cc4.js
+highcharts.js: highcharts-7e134ad405badf2c3b09972448b1b9cc.js
+jquery-1.4.2.min.js: jquery-1.4.2.min-3ce9cf0923bdae3bb408435296c99963.js
 application.css: application-a63cd011ffe961c078e9cba39fdf8135.css
 log_book.css: log_book-a63cd011ffe961c078e9cba39fdf8135.css

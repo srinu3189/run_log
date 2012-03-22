@@ -1,4 +1,5 @@
 require 'exports_runs'
+require 'calculates_mileage'
 
 class LogBookController < ApplicationController
   before_filter :authenticate_runner!
@@ -6,6 +7,7 @@ class LogBookController < ApplicationController
   def index
     @new_run = Run.new
     @runs =	Run.find_all_and_calculate_mileage
+    @yearly_mpw_series = CalculatesMileage.calculate_yearly_mpw_series_for_runs(@runs)
   end
 
   def new_run

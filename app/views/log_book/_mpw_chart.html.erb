@@ -1,0 +1,60 @@
+<script type="text/javascript">
+var chart;
+$(document).ready(function() {
+  chart = new Highcharts.Chart({
+  chart: {
+   renderTo: 'container',
+   type: 'line',
+   marginRight: 0,
+   marginBottom: 85
+  },
+  title: {
+   text: 'Miles Per Week Per Year',
+  },
+  subtitle: {
+    text: 'Trial of Miles; Miles of Trials',
+  },
+  xAxis: {
+    categories: [
+    <% (0..53).each do |i| %>
+      <%= i %><%= ',' if i < 53 %>
+    <% end %> 
+    ],
+    labels: { 
+      staggerLines: 2 
+    } 
+  },
+  yAxis: {
+    title: {
+      text: 'Miles'
+    },
+    plotLines: [{
+      value: 0,
+      width: 1,
+      color: '#808080'
+    }]
+  },
+  tooltip: {
+    formatter: function() {
+      return '<b>'+ this.series.name +'</b><br/>'+
+      this.x +': '+ this.y;
+    }
+  },
+series: [
+          <% @yearly_mpw_series.keys.sort.each_with_index do |year, year_index| %> 
+            {
+name: '<%= year %>',
+        data:
+        [
+        <% @yearly_mpw_series[year].each_with_index do |weekly_mpw, week_index| %>
+          <%= weekly_mpw.to_s + "," %> 
+        <% end %>
+        ]
+            }
+            <%= ',' unless year_index == @yearly_mpw_series.length - 1 %>
+          <% end %>
+     ]
+  });
+});
+</script>
+<div id='container'></div>

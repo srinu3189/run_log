@@ -46,7 +46,7 @@ RunLog::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( log_book.css )
+  config.assets.precompile += [ 'log_book.css', 'highcharts.js', 'jquery-1.4.2.min.js' ]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

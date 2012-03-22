@@ -8,10 +8,19 @@ describe LogBookController do
 
   describe "#index" do
     it "returns the list of runs" do
-      run = mock_model(Run);
+      run = mock_model(Run, :date => Date.today, :miles => 4);
       Run.should_receive(:find_all_and_calculate_mileage).and_return([run])
       get 'index' 
       assigns[:runs].should == [run]
+    end
+    
+    it "returns a collection of yearly mileage data" do
+      yearly_hashes = []
+      run = mock_model(Run);
+      Run.should_receive(:find_all_and_calculate_mileage).and_return([run])
+      CalculatesMileage.should_receive(:calculate_yearly_mpw_series_for_runs).with([run]).and_return(yearly_hashes)
+      get 'index' 
+      assigns[:yearly_mpw_series].should == yearly_hashes
     end
   end	
 
