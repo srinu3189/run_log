@@ -6,7 +6,7 @@
     <%= f.date_select :date, options = { :date_separator => "/ ", :use_short_month => "true", :order => [:day, :month, :year] } %> 
   </div>
   <div class='field'>
-    <%= f.number_field :miles, :min => 1, :max => 999, :size => 5, :autofocus => true %> miles
+    <%= f.number_field :miles, :step => "0.1", :min => 1, :max => 999, :size => 5, :autofocus => true %> miles
   </div>
   <div class='field'>
     <%= f.number_field :hours, :value => 0, :size => 3 %> : <%= f.number_field :minutes, :value => 0, :size => 3 %> : <%= f.number_field :seconds, :value => 0, :size => 3 %>
