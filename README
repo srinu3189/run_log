@@ -1,6 +1,12 @@
 A project I'm using to get more familiar with Cucumber, RSpec, Ruby, and Rails.  It is a basic running log with a nice chart for miles per week per year.  It also displays the rolling miles per week for each run logged to give an indication of how many miles are on the legs when the run took place.
 
+Notes:
+
+This only supports one runner per instance
+The CSS only looks reasonable in Safari (sorry, but that's the only one I care use to log runs)
+
 TODO: 
 
+JavaScript addition to show pace on the fly
 Travis CI
 Make the controller specs better
