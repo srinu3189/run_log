@@ -1,9 +1,9 @@
 require 'timecop'
 
 Given /^I am on the logbook page$/ do
-  visit log_book_path
   static_date = Time.local(2012, 3, 17, 5, 0, 0)
   Timecop.freeze(static_date)
+  visit log_book_path
 end
 
 When /^I log a run for today$/ do
